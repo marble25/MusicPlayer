@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MusicPlayer</class>
+ <widget class="QMainWindow" name="MusicPlayer">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>741</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MusicPlayer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>500</width>
+     <height>700</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>500</width>
+     <height>700</height>
+    </size>
+   </property>
+   <widget class="QLabel" name="Text_Album">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>241</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Album</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Text_Artist">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>50</y>
+      <width>241</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Artist</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Text_Genre">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>80</y>
+      <width>241</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Genre</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Text_Date">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>110</y>
+      <width>241</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Date</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Text_Title">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>130</y>
+      <width>421</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Song</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="Button_Play">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>200</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>▶</string>
+    </property>
+    <property name="arrowType">
+     <enum>Qt::NoArrow</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="Button_Next">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>200</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>▷</string>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonIconOnly</enum>
+    </property>
+    <property name="arrowType">
+     <enum>Qt::NoArrow</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="Button_Back">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>200</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>◁</string>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonIconOnly</enum>
+    </property>
+    <property name="arrowType">
+     <enum>Qt::NoArrow</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AlbumArt">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>110</width>
+      <height>110</height>
+     </rect>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="Lyrics">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>230</y>
+      <width>421</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="showDropIndicator" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::NoSelection</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="Slider">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>170</y>
+      <width>421</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="singleStep">
+     <number>0</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickInterval">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Text_Time">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>200</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0:0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Text_Time_0">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>200</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0:0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>630</y>
+      <width>421</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32767</number>
+    </property>
+    <property name="dragEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>검색하세요</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="Tap_List">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>440</y>
+      <width>424</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="MelonTopChart">
+     <attribute name="title">
+      <string>Top100</string>
+     </attribute>
+     <widget class="QListWidget" name="ChartList">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>419</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>256</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::DoubleClicked</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="OrderedByABC">
+     <attribute name="title">
+      <string>가나다순</string>
+     </attribute>
+     <widget class="QListWidget" name="ABCList">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>419</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>256</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::DoubleClicked</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="OrderedBySinger">
+     <attribute name="title">
+      <string>가수순</string>
+     </attribute>
+     <widget class="QListWidget" name="SingerList">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>419</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>256</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::DoubleClicked</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="OrderedByYear">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <attribute name="title">
+      <string>연도순</string>
+     </attribute>
+     <widget class="QComboBox" name="Combo_Year">
+      <property name="geometry">
+       <rect>
+        <x>-3</x>
+        <y>-1</y>
+        <width>424</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="YearList">
+      <property name="geometry">
+       <rect>
+        <x>-2</x>
+        <y>20</y>
+        <width>421</width>
+        <height>141</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QCheckBox" name="Check_Random">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>440</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>랜덤 재생</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="Volume">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>20</y>
+      <width>21</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="singleStep">
+     <number>0</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="tickInterval">
+     <number>0</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="Files">
+    <property name="title">
+     <string>파일</string>
+    </property>
+    <addaction name="Download"/>
+    <addaction name="OpenInfoFolder"/>
+    <addaction name="OpenFolder"/>
+   </widget>
+   <widget class="QMenu" name="Updates">
+    <property name="title">
+     <string>업데이트</string>
+    </property>
+    <addaction name="TagUpdate"/>
+    <addaction name="FileUpdate"/>
+   </widget>
+   <addaction name="Files"/>
+   <addaction name="Updates"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="Download">
+   <property name="text">
+    <string>멜론 Top 100 다운로드</string>
+   </property>
+  </action>
+  <action name="OpenFolder">
+   <property name="text">
+    <string>폴더 열기</string>
+   </property>
+  </action>
+  <action name="TagUpdate">
+   <property name="text">
+    <string>앨범 태그 업데이트</string>
+   </property>
+  </action>
+  <action name="FileUpdate">
+   <property name="text">
+    <string>파일 목록 업데이트</string>
+   </property>
+  </action>
+  <action name="OpenInfoFolder">
+   <property name="text">
+    <string>Info 폴더 열기</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
